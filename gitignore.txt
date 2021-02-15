@@ -1,0 +1,5 @@
+.git/
+.vs/
+WorkoutAndTrackCalories/bin/
+WorkoutAndTrackCalories/obj/
+WorkoutAndTrackCalories/WorkoutAndTrackCalories.csproj.user
