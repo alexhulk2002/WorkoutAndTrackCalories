@@ -7,14 +7,24 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="415" Width="540" ResizeMode="CanResize" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" >
     <Grid Background="black" >
-        <Border BorderThickness="2" CornerRadius="10" Background="Transparent" Width="200" Height="30" VerticalAlignment="Top">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*">
+              
+            </RowDefinition>
+        </Grid.RowDefinitions>
+        <Border Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="2" CornerRadius="10" Background="Transparent" Width="200" Height="30" VerticalAlignment="Top">
             <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="22" Foreground="Red" FontFamily="Cooper Black" Margin="0,0,0,-2" Width="200">Hello</TextBlock>
         </Border>
 
-        <Button Name="workout" Click="Workout_Click" Margin="0,35,270,0" >
-            <Image Source="images.jfif" Stretch="UniformToFill" HorizontalAlignment="Center"></Image>
+        <Button Grid.Row="1" Grid.Column="0" Name="workout" Click="Workout_Click">
+            <Image Source="images.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"></Image>
         </Button>
-        <Button Name="calories" Click="Calories_Click" Margin="270,35,0,0" Background="Silver">
+        <Button Grid.Row="1" Grid.Column="1" Name="cal" Click="Calories_Click" Background="Silver">
             <Image Source="MostWanted_m.jpg"></Image>
         </Button>
     </Grid>

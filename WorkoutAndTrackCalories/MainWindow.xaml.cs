@@ -25,6 +25,7 @@ namespace WorkoutAndTrackCalories
         {
             InitializeComponent();
         }
+        calories calories = new calories();
         private void Workout_Click(object sender, RoutedEventArgs e)
         {
             Content = page1;
@@ -32,7 +33,7 @@ namespace WorkoutAndTrackCalories
 
         private void Calories_Click(object sender, RoutedEventArgs e)
         {
-            //Content = calories;
+            Content = calories;
         }
     }
 }
