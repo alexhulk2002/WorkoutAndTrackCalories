@@ -18,7 +18,52 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <RadioButton Content="123"/>
         <Image Grid.ColumnSpan="2" Stretch="Fill" Grid.RowSpan="3" Source="a4pf82.jpg"/>
+        <StackPanel Orientation="Horizontal">
+            <StackPanel.Resources>
+
+                <Style TargetType="{x:Type RadioButton}">
+                    <Setter Property="Margin" Value="10 0"/>
+                </Style>
+            </StackPanel.Resources>
+            <RadioButton Name="strenght" Grid.Row="0" Grid.Column="0" FontFamily="Cooper Black" Foreground="red" GroupName="goal" Content="strength" IsChecked="True" Checked="RadioButton2_Checked"/>
+            <RadioButton Name="hypertrophy" Grid.Row="0" Grid.Column="0" FontFamily="Cooper Black" Foreground="red" GroupName="goal" Content="hypertrophy" Checked="RadioButton2_Checked"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Row="1">
+            <StackPanel.Resources>
+
+                <Style TargetType="{x:Type RadioButton}">
+                    <Setter Property="Margin" Value="10 0"/>
+                </Style>
+            </StackPanel.Resources>
+            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="pull" Checked="RadioButton4_Checked"/>
+            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="push" Checked="RadioButton4_Checked" IsChecked="True"/>
+            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="legs" Checked="RadioButton4_Checked"/>
+            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="abs" Checked="RadioButton4_Checked"/>
+            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="full body" Checked="RadioButton4_Checked"/>
+        </StackPanel>
+        <Border CornerRadius="10" BorderThickness="5" BorderBrush="Bisque" Grid.Column="0" Grid.Row="2">
+            <TextBlock Name="show_exercices" Foreground="White" Background="Transparent" ></TextBlock>
+        </Border>
+        <TextBlock Grid.RowSpan="2" Grid.Row="0" Grid.Column="1" Foreground="Red" FontFamily="cooper black" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">max reps</TextBlock>
+        <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
+            <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max push ups</TextBlock>
+            <TextBox Name="pushups">0</TextBox>
+            <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max pull ups</TextBlock>
+            <TextBox Name="pullups">0</TextBox>
+            <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max crunches</TextBlock>
+            <TextBox Name="crunches">0</TextBox>
+            <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max squats</TextBlock>
+            <TextBox Name="squats">0</TextBox>
+            <Border CornerRadius="2" BorderThickness="4" BorderBrush="Azure" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Name="generate" Background="Azure" Foreground="Red" FontFamily="cooper black" Click="generate_Click" >generate workout</Button>
+            </Border>
+            <Border CornerRadius="2" BorderThickness="4" BorderBrush="Azure" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Name="savedata" Background="Azure" Foreground="Red" FontFamily="cooper black" Click="savedata_Click" >Save</Button>
+            </Border>
+            <Border CornerRadius="2" BorderThickness="4" BorderBrush="Azure" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Name="loaddata" Background="Azure" Foreground="Red" FontFamily="cooper black" Click="loaddata_Click" >Load</Button>
+            </Border>
+        </StackPanel>
     </Grid>
 </Page>

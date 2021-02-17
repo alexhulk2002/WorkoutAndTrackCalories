@@ -16,14 +16,30 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
         <TextBlock Grid.Column="0" FontFamily="cooper black" Foreground="Red" FontSize="20">introduceti alimentele si cantitatea</TextBlock>
         <Border Grid.Row="1" CornerRadius="15" BorderThickness="5" BorderBrush="BlueViolet" Padding="12">
-        <TextBox Name="CaloriesInput" Grid.Column="1" Background="Transparent" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></TextBox>
+            <TextBox Name="CaloriesInput" Grid.Column="1" Background="Transparent" TextWrapping="Wrap" AcceptsReturn="True" VerticalScrollBarVisibility="Visible"></TextBox>
         </Border>
-        <TextBlock Grid.Column="1" FontFamily="cooper black" Foreground="Red" FontSize="20">total calorii</TextBlock>
-        <Border Grid.Row="1" Grid.Column="1" CornerRadius="15" BorderThickness="5" BorderBrush="BlueViolet" Padding="12">
-            <TextBlock Name="CaloriesOutput"  ></TextBlock>
+        <TextBlock Grid.Column="1" FontFamily="cooper black" Foreground="Red" FontSize="20" HorizontalAlignment="Center">total calorii</TextBlock>
+        <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"  CornerRadius="15" BorderThickness="5" BorderBrush="BlueViolet" Padding="12">
+            <ScrollViewer>
+                <TextBlock Name="CaloriesOutput"  ></TextBlock>
+            </ScrollViewer>
         </Border>
+
+        <Border Grid.Column="0" Grid.Row="2" Background="Transparent" >
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            
+            <Button Grid.Column="0" Name="submit" Click="submit_Click" Content="terminati" Background="Transparent" FontSize="15" FontFamily="cooper black" Foreground="#0208FB"/>
+            <Button Grid.Column="1" Name="add" Click="add_Click" Content="adauga aliment" Background="Transparent" FontSize="15" FontFamily="cooper black" Foreground="#0208FB"/>
+            </Grid>
+        </Border>
+        
     </Grid>
 </Page>

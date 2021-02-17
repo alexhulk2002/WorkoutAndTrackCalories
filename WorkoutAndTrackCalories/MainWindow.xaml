@@ -6,26 +6,15 @@
         xmlns:local="clr-namespace:WorkoutAndTrackCalories"
         mc:Ignorable="d"
         Title="MainWindow" Height="415" Width="540" ResizeMode="CanResize" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" >
-    <Grid Background="black" >
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="30"/>
-            <RowDefinition Height="*">
-              
-            </RowDefinition>
-        </Grid.RowDefinitions>
-        <Border Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="2" CornerRadius="10" Background="Transparent" Width="200" Height="30" VerticalAlignment="Top">
-            <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="22" Foreground="Red" FontFamily="Cooper Black" Margin="0,0,0,-2" Width="200">Hello</TextBlock>
-        </Border>
+    <Grid>
 
-        <Button Grid.Row="1" Grid.Column="0" Name="workout" Click="Workout_Click">
-            <Image Source="images.jpg" Stretch="UniformToFill" HorizontalAlignment="Center"></Image>
-        </Button>
-        <Button Grid.Row="1" Grid.Column="1" Name="cal" Click="Calories_Click" Background="Silver">
-            <Image Source="MostWanted_m.jpg"></Image>
-        </Button>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <!--  StackPanel Orientation="Horizontal" Height="25">
+            <Button Content="&#8592;" Name="BackButton" Click="BackButton_Click"/>
+        </-->
+        <Frame Grid.Row="1" Name="PageViewer" NavigationUIVisibility="Visible"></Frame>
     </Grid>
 </Window>

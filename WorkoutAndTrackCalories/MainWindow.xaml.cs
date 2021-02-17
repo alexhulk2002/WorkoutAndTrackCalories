@@ -21,19 +21,21 @@ namespace WorkoutAndTrackCalories
     public partial class MainWindow : Window
     {
         Page1 page1 = new Page1();
+        
+       
         public MainWindow()
         {
             InitializeComponent();
+            PageViewer.Navigate(MainPage);
+            //BackButton.Visibility = Visibility.Hidden;
+            //PageViewer.Navigate(page1);
+            //PageViewer.Navigate(calories);
         }
         calories calories = new calories();
-        private void Workout_Click(object sender, RoutedEventArgs e)
-        {
-            Content = page1;
-        }
 
-        private void Calories_Click(object sender, RoutedEventArgs e)
-        {
-            Content = calories;
-        }
+        public static MainPage MainPage = new MainPage();
+        public static calories CaloriesPage = new calories();
+        public static Page1 Page1 = new Page1();
+        
     }
 }
