@@ -5,16 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkoutAndTrackCalories"
         mc:Ignorable="d"
-        Title="MainWindow" Height="415" Width="540" ResizeMode="CanResize" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" >
+        Title="MainWindow" Height="415" Width="540" ResizeMode="CanResize" WindowStyle="SingleBorderWindow" ShowInTaskbar="True" 
+        Closed="Window_Closed">
     <Grid>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <!--  StackPanel Orientation="Horizontal" Height="25">
-            <Button Content="&#8592;" Name="BackButton" Click="BackButton_Click"/>
-        </-->
         <Frame Grid.Row="1" Name="PageViewer" NavigationUIVisibility="Visible"></Frame>
     </Grid>
 </Window>

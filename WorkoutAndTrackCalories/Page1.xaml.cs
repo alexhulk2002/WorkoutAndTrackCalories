@@ -68,6 +68,10 @@ namespace WorkoutAndTrackCalories
 
         private void loaddata_Click(object sender, RoutedEventArgs e)
         {
+            if(!File.Exists("data.bin"))
+            {
+                MessageBox.Show("File not found. Please retype your data and press Save");
+            }
             using(BinaryReader br=new BinaryReader(File.OpenRead("data.bin")))
             {
                 int i_pushups = br.ReadInt32();
@@ -150,15 +154,35 @@ namespace WorkoutAndTrackCalories
         string param1="strength";
         private void RadioButton2_Checked(object sender, RoutedEventArgs e)
         {
-            param1 = (sender as RadioButton).Content as string;
-            // MessageBox.Show(param1);
+            param1 = (sender as RadioButton).Content as string;            
         }
 
         string param2="push";
         private void RadioButton4_Checked(object sender, RoutedEventArgs e)
         {
-            param2 = (sender as RadioButton).Content as string;
-            //MessageBox.Show(param2);
+            param2 = (sender as RadioButton).Content as string;            
+        }
+
+        private void NumericForce_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            var Input = sender as TextBox;
+            if(Input.Text=="")
+            {
+                Input.Text = "0";
+                return;
+            }
+            if (int.TryParse(Input.Text, out int val))
+            {
+                if (val < 0) val = 0;
+                else if (val > 1000) val = 1000;
+                Input.Text = val.ToString();
+                if (val < 10) Input.CaretIndex = 1;
+            }
+            else
+            {
+                int i = Input.CaretIndex;
+                Input.CaretIndex = Math.Min(i - 1, Input.Text.Length);                
+            }
         }
     }
 }

@@ -18,8 +18,7 @@ namespace WorkoutAndTrackCalories
             Acg = acg;
             Cal = cal;
 
-        }
-        public string Name;
+        }        public string Name { get; set; }
         public float Glucide, Zaharuri, Lipide, Proteine, Acg, Cal;
     }
 }

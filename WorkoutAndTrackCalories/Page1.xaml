@@ -48,13 +48,13 @@
         <TextBlock Grid.RowSpan="2" Grid.Row="0" Grid.Column="1" Foreground="Red" FontFamily="cooper black" FontSize="22" VerticalAlignment="Center" HorizontalAlignment="Center">max reps</TextBlock>
         <StackPanel Orientation="Vertical" Grid.Row="2" Grid.Column="1">
             <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max push ups</TextBlock>
-            <TextBox Name="pushups">0</TextBox>
+            <TextBox Name="pushups" TextChanged="NumericForce_TextChanged">0</TextBox>
             <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max pull ups</TextBlock>
-            <TextBox Name="pullups">0</TextBox>
+            <TextBox Name="pullups" TextChanged="NumericForce_TextChanged">0</TextBox>
             <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max crunches</TextBlock>
-            <TextBox Name="crunches">0</TextBox>
+            <TextBox Name="crunches" TextChanged="NumericForce_TextChanged">0</TextBox>
             <TextBlock Foreground="Red" FontFamily="cooper black" FontSize="16">max squats</TextBlock>
-            <TextBox Name="squats">0</TextBox>
+            <TextBox Name="squats" TextChanged="NumericForce_TextChanged">0</TextBox>
             <Border CornerRadius="2" BorderThickness="4" BorderBrush="Azure" VerticalAlignment="Center" HorizontalAlignment="Center">
                 <Button Name="generate" Background="Azure" Foreground="Red" FontFamily="cooper black" Click="generate_Click" >generate workout</Button>
             </Border>

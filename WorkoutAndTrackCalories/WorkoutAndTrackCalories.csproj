@@ -85,6 +85,7 @@
     <Compile Include="calories.xaml.cs">
       <DependentUpon>calories.xaml</DependentUpon>
     </Compile>
+    <Compile Include="IndexConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>

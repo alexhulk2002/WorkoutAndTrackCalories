@@ -22,11 +22,34 @@ namespace WorkoutAndTrackCalories
         public add_aliment()
         {
             InitializeComponent();
+            calories.Alimente=calories.Alimente.OrderBy(o => o.Name).ToList();
+            AlimentsList.ItemsSource = calories.Alimente;
         }
+
+        public calories POwner;
 
         private void adauga_Click(object sender, RoutedEventArgs e)
         {
+            POwner.CaloriesInput.Text += $"" +
+                $"{calories.Alimente[int.Parse(numar_aliment.Text)].Name}\n {cantitate_aliment.Text} g \n";
+            calories.numar = int.Parse(numar_aliment.Text);
+            calories.cantitate = int.Parse(cantitate_aliment.Text);
+            POwner.CaloriesOutput.Text += $"" +
+                $"*" + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Name}:\n"
+                + $"Glucide:" + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Glucide / 100 * calories.cantitate}\n"
+                + $"Zaharuri: " + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Zaharuri / 100 * calories.cantitate}\n"
+                + $"Lipide: " + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Lipide / 100 * calories.cantitate}\n"
+                + $"Proteine: " + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Proteine / 100 * calories.cantitate}\n"
+                + $"Acg: " + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Acg / 100 * calories.cantitate}\n"
+                + $"Cal: " + $"{calories.Alimente[int.Parse(numar_aliment.Text)].Cal / 100 * calories.cantitate}\n \n";
 
+            calories.G += calories.Alimente[int.Parse(numar_aliment.Text)].Glucide / 100 * calories.cantitate;
+            calories.Z += calories.Alimente[int.Parse(numar_aliment.Text)].Zaharuri / 100 * calories.cantitate;
+            calories.L += calories.Alimente[int.Parse(numar_aliment.Text)].Lipide / 100 * calories.cantitate;
+            calories.P += calories.Alimente[int.Parse(numar_aliment.Text)].Proteine / 100 * calories.cantitate;
+            calories.ACG += calories.Alimente[int.Parse(numar_aliment.Text)].Acg / 100 * calories.cantitate;
+            calories.CAL += calories.Alimente[int.Parse(numar_aliment.Text)].Cal / 100 * calories.cantitate;
+            calories.Q += float.Parse(cantitate_aliment.Text);
         }
     }
 }

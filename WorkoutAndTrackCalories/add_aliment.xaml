@@ -6,6 +6,9 @@
         xmlns:local="clr-namespace:WorkoutAndTrackCalories"
         mc:Ignorable="d"
         Title="add_aliment" Height="200" Width="400">
+    <Window.Resources>
+        <local:IndexConverter x:Key="IndexConverter"/>
+    </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -23,7 +26,31 @@
         </StackPanel>
         <Border Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" BorderBrush="Black" BorderThickness="1">
             <ScrollViewer >
-        </ScrollViewer>
+                <ListView Name="AlimentsList">
+                    <ListView.Resources>
+                        <Style TargetType="ListViewItem">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type ListViewItem}">
+                                        <ContentPresenter/>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListView.Resources>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock>
+                                <Run Text="{Binding Path=., RelativeSource={RelativeSource FindAncestor,
+                                    AncestorType={x:Type ListViewItem}},
+                                    Converter={StaticResource IndexConverter}}"/>
+                                <Run Text="."/>
+                                <Run Text="{Binding Name}"></Run>
+                            </TextBlock>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ScrollViewer>
          </Border>
         <Button Width="70" Height="25" Background="BlueViolet" FontFamily="georgia" Grid.Column="0" Grid.Row="1" Name="adauga" Content="adauga" Click="adauga_Click"></Button>
     </Grid>

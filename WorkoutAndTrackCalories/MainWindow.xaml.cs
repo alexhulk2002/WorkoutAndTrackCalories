@@ -26,16 +26,16 @@ namespace WorkoutAndTrackCalories
         public MainWindow()
         {
             InitializeComponent();
-            PageViewer.Navigate(MainPage);
-            //BackButton.Visibility = Visibility.Hidden;
-            //PageViewer.Navigate(page1);
-            //PageViewer.Navigate(calories);
-        }
-        calories calories = new calories();
+            PageViewer.Navigate(MainPage); 
+        }        
 
         public static MainPage MainPage = new MainPage();
         public static calories CaloriesPage = new calories();
         public static Page1 Page1 = new Page1();
-        
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
+        }
     }
 }

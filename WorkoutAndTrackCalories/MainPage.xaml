@@ -15,9 +15,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="30"/>
-            <RowDefinition Height="*">
-
-            </RowDefinition>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Border Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="2" CornerRadius="10" Background="Transparent" Width="200" Height="30" VerticalAlignment="Top">
             <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="22" Foreground="Red" FontFamily="Cooper Black" Margin="0,0,0,-2" Width="200">Hello</TextBlock>

@@ -21,12 +21,12 @@ namespace WorkoutAndTrackCalories
         public calories()
         {
             InitializeComponent();
-            //Alimente.Sort();
             for (int i = 0; i < Alimente.Count; i++)
                 Alimente[i].Acg = 0;
+            add_Aliment.POwner = this;
         }
 
-        public List<Aliment> Alimente = new List<Aliment>()
+        public static List<Aliment> Alimente = new List<Aliment>()
         {
             new Aliment("lapte",5,5,3.75f,3.75f,2.5f,67),
             new Aliment("banana",22.8f,12.2f,1.1f,0.3f,0.11f,89),
@@ -46,16 +46,24 @@ namespace WorkoutAndTrackCalories
             new Aliment("cartofi",21.8f,1.53f,2.1f,0.15f,0.02f,94),
             new Aliment("carnat",1.7f,0,15,26,11,301),
         };
-
+        public static float numar, cantitate, G = 0, Z = 0, P = 0, L = 0, ACG = 0, Q = 0, CAL = 0;
         private void submit_Click(object sender, RoutedEventArgs e)
         {
-
+            CaloriesOutput.Text +="*Total:\n"
+               + $"Cantitate: {Q} g\n"
+             + $"Calorii: {CAL} \n" 
+             + $"Glucide: {G} \n"
+            + $"Din care zaharuri: {Z} \n"
+            + $"Proteine: {P}\n"
+            + $"Lipide: {L} \n"
+            + $"Din care saturate: {ACG}";
         }
         add_aliment add_Aliment = new add_aliment();
         private void add_Click(object sender, System.Windows.RoutedEventArgs e)
         {
-            add_aliment add_aliment = new add_aliment();
-            add_aliment.ShowDialog();
+            add_Aliment.ShowDialog();
         }
+
+        
     }
 }
