@@ -18,7 +18,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" FontFamily="cooper black" Foreground="Red" FontSize="20">introduceti alimentele si cantitatea</TextBlock>
+        <TextBlock Grid.Column="0" FontFamily="cooper black" Foreground="Red" FontSize="18">introduceti alimentele si cantitatea</TextBlock>
         <Border Grid.Row="1" Grid.Column="0" CornerRadius="15" BorderThickness="5" BorderBrush="BlueViolet" Padding="12">
             <ScrollViewer>
             <TextBlock Name="CaloriesInput"  Background="Transparent"></TextBlock>

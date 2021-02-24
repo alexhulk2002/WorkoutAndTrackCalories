@@ -47,7 +47,6 @@ namespace WorkoutAndTrackCalories
 
         private void generate_Click(object sender, RoutedEventArgs e)
         {
-            //show_exercices.Text=functions[param1][param2]();
             show_exercices.Text = functions[param1][param2]?.Invoke();
         }
 
@@ -93,59 +92,136 @@ namespace WorkoutAndTrackCalories
             result += i_pushups / 2 + " archer push ups\n";
             result += i_pushups / 3 * 2 + " declie push ups\n";
             result += i_pushups / 3 * 2 + " weighted push ups\n";
-            result += i_pushups / 2 + "push ups\n";
-            result += i_pushups / 3 + "skull crushers\n";
+            result += i_pushups / 2 + " push ups\n";
+            result += i_pushups / 3 + " skull crushers\n";
             result += "1 min plank\n";
             result += " 3-5 sets 1.5-2 min rest";
-            //MessageBox.Show(result);
             return result;
         }
         string strength_pull()
         {
             string result ="";
+            int i_crunches = int.Parse(crunches.Text);
             int i_pullups = int.Parse(pullups.Text);
-
-
+            result += i_pullups / 3 + " explosive pull ups\n";
+            result += i_pullups / 2 + " archer pull ups\n";
+            result += i_pullups / 2 + " tuck front lever raises\n";
+            result += i_pullups / 2 + " wide pull ups\n";
+            result += i_pullups / 2 + " pull ups\n";
+            result += i_crunches / 2 + " hanging leg raises\n";
+            result += " 3-5 sets 1.5-2 min rest";
             return result;
         }
         string strength_legs()
         {
             string result = "";
+            int i_squats = int.Parse(squats.Text);
+            int i_crunches = int.Parse(crunches.Text);
+            result += i_squats / 3 + " pistol squats\n";
+            result += i_squats / 2 + " bulgarian squats\n";
+            result += i_crunches / 3 * 2 + " crunches\n";
+            result += i_squats / 3 + " jumping squats\n";
+            result += i_crunches / 2 + " V ups\n";
+            result += i_squats / 2 + " squats\n";
+            result += " 3-5 sets 1.5-2 min rest";
             return result;
         }
         string strength_abs()
         {
             string result = "";
+            int i_crunches = int.Parse(crunches.Text);
+            result += i_crunches / 3 + " V ups\n";
+            result += i_crunches / 2 + " hanging leg raises\n";
+            result += " 1 min weighted plank\n";
+            result += i_crunches / 3 * 2 + " bicycle crunches\n";
+            result += " 3-5 sets 1.5-2 min rest";
             return result;
         }
         string strength_fullbody()
         {
             string result = "";
+            int i_pushups = int.Parse(pushups.Text);
+            int i_pullups = int.Parse(pullups.Text);
+            int i_crunches = int.Parse(crunches.Text);
+            int i_squats = int.Parse(squats.Text);
+            result += i_pushups / 2 + " archer push ups\n";
+            result += i_pushups /2 + " clapping push ups\n";
+            result += i_pullups / 3 + " high pull ups\n";
+            result += i_pullups /3*2 + " wide pull ups\n";
+            result += i_squats / 3 + " pistol squats\n";
+            result += i_squats / 3 * 2 + " squats\n";
+            result += i_crunches / 3 + " V ups\n";
+            result += "3-5 sets 1.5-2 min rest";
             return result;
         }
         string hypertrophy_push()
         {
             string result = "";
+            int i_pushups = int.Parse(pushups.Text);
+            int i_crunches = int.Parse(crunches.Text);
+            result += i_pushups / 3 * 2 + " push ups\n";
+            result += i_pushups / 2 + " diamond push ups\n";
+            result += i_pushups / 3 * 2 + " wide push ups\n";
+            result += i_pushups / 2 + " decline push ups\n";
+            result += i_pushups / 3 + " triceps push ups\n";
+            result += i_crunches / 2 + " crunches\n";
+            result += "3-5 sets 1 min rest";
             return result;
         }
         string hypertrophy_pull()
         {
             string result = "";
+            int i_pullups = int.Parse(pullups.Text);
+            int i_crunches = int.Parse(crunches.Text);
+            result += i_pullups/3*2 + " pull ups\n";
+            result += i_pullups / 3 * 2 + " chin ups\n";
+            result += i_pullups / 3 * 2 + " wide pull ups\n";
+            result += i_pullups / 3 * 2 + " close pull ups\n";
+            result += i_crunches / 2 + " hanging leg raises\n";
+            result += "3-5 sets 1 min rest\n";
             return result;
         }
         string hypertrophy_legs()
         {
             string result = "";
+            int i_crunches = int.Parse(crunches.Text);
+            int i_squats = int.Parse(squats.Text);
+            result += i_squats / 4 * 3 + " squats\n";
+            result += i_squats / 3 * 2 + " bulgarian squats\n";
+            result += i_squats + " calf raises\n";
+            result += i_squats / 3 * 2 + " lateral squats\n";
+            result += i_crunches / 3 + " V ups\n";
+            result += " 3-5 sets 1 min rest";
             return result;
         }
         string hypretrophy_abs()
         {
             string result = "";
+            int i_crunches = int.Parse(crunches.Text);
+            result += i_crunches / 3 * 2 + " crunches\n";
+            result += i_crunches / 2 + " leg raises\n";
+            result += i_crunches / 3 * 2 + " bicycle crunches\n";
+            result += i_crunches / 4 * 3 + " russian twist\n";
+            result += " 1 min mountain climber\n";
+            result += "3-5 sets 1 min rest";
             return result;
         }
         string hypertrophy_fullbody()
         {
             string result = "";
+            int i_pushups = int.Parse(pushups.Text);
+            int i_pullups = int.Parse(pullups.Text);
+            int i_crunches = int.Parse(crunches.Text);
+            int i_squats = int.Parse(squats.Text);
+            result += i_pushups / 3 * 2 + " push ups\n";
+            result += i_pushups / 2 + " diamond push ups\n";
+            result += i_pullups / 2 + " wide pull ups\n";
+            result += i_pullups /3*2 + " chin ups\n";
+            result += i_squats / 3 * 2 + " squats\n";
+            result += i_squats / 3 * 2 + " bulgarian squats\n";
+            result += i_crunches/4*3 + " crunches\n";
+            result += i_crunches / 2 + " leg raises\n";
+            result += " 3-5 sets 1 min rest";
             return result;
         }
 

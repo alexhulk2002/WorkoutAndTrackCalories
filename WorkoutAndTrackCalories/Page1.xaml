@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:WorkoutAndTrackCalories"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="463.082" d:DesignWidth="800.689"
       Title="Page1">
 
     <Grid>
@@ -26,7 +26,7 @@
                     <Setter Property="Margin" Value="10 0"/>
                 </Style>
             </StackPanel.Resources>
-            <RadioButton Name="strenght" Grid.Row="0" Grid.Column="0" FontFamily="Cooper Black" Foreground="red" GroupName="goal" Content="strength" IsChecked="True" Checked="RadioButton2_Checked"/>
+            <RadioButton Name="strenght" Grid.Row="0" Grid.Column="0" FontFamily="Cooper Black" Foreground="red" GroupName="goal" Content="strength" Checked="RadioButton2_Checked"/>
             <RadioButton Name="hypertrophy" Grid.Row="0" Grid.Column="0" FontFamily="Cooper Black" Foreground="red" GroupName="goal" Content="hypertrophy" Checked="RadioButton2_Checked"/>
         </StackPanel>
         <StackPanel Orientation="Horizontal" Grid.Row="1">
@@ -37,7 +37,7 @@
                 </Style>
             </StackPanel.Resources>
             <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="pull" Checked="RadioButton4_Checked"/>
-            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="push" Checked="RadioButton4_Checked" IsChecked="True"/>
+            <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="push" Checked="RadioButton4_Checked"/>
             <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="legs" Checked="RadioButton4_Checked"/>
             <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="abs" Checked="RadioButton4_Checked"/>
             <RadioButton  Grid.Column="0" FontFamily="Cooper Black" Foreground="red"  Content="full body" Checked="RadioButton4_Checked"/>
