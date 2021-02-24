@@ -41,5 +41,10 @@ namespace WorkoutAndTrackCalories
             //PageViewer.Visibility = Visibility.Visible;
             //BackButton.Visibility = Visibility.Visible;
         }
+        //BMI bmi = new BMI();
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            new BMI().ShowDialog();
+        }
     }
 }
