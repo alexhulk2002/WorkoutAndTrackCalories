@@ -58,6 +58,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="add_aliment_nou.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="BMI.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -70,6 +74,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="exercices.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -81,6 +89,9 @@
     <Compile Include="add_aliment.xaml.cs">
       <DependentUpon>add_aliment.xaml</DependentUpon>
     </Compile>
+    <Compile Include="add_aliment_nou.xaml.cs">
+      <DependentUpon>add_aliment_nou.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Aliment.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
@@ -91,6 +102,9 @@
     </Compile>
     <Compile Include="calories.xaml.cs">
       <DependentUpon>calories.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="exercices.xaml.cs">
+      <DependentUpon>exercices.xaml</DependentUpon>
     </Compile>
     <Compile Include="IndexConverter.cs" />
     <Compile Include="MainPage.xaml.cs">

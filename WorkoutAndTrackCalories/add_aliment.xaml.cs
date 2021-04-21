@@ -51,5 +51,8 @@ namespace WorkoutAndTrackCalories
             calories.CAL += calories.Alimente[int.Parse(numar_aliment.Text)-1].Cal / 100 * calories.cantitate;
             calories.Q += float.Parse(cantitate_aliment.Text);
         }
+        add_aliment_nou add_Aliment_Nou = new add_aliment_nou();
+
+       
     }
 }

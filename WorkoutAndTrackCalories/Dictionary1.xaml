@@ -2,12 +2,14 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     xmlns:local="clr-namespace:WorkoutAndTrackCalories">
     <Style x:Key="RB" TargetType="{x:Type Button}">
-        <Setter Property="Foreground" Value="Yellow"></Setter>
+        <Setter Property="Foreground" Value="#0208FB"></Setter>
+        <Setter Property="FontFamily" Value="cooper black"></Setter>
+        <Setter Property="FontSize" Value="20"></Setter>
 
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Button}">
-                    <Border CornerRadius="5" Background="Red" Width="63" Height="20">
+                    <Border CornerRadius="10" Background="Transparent"  HorizontalAlignment="Left">
 
                         <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}"/>
                     </Border>

@@ -52,6 +52,9 @@
                 </ListView>
             </ScrollViewer>
          </Border>
-        <Button Width="70" Height="25" Background="BlueViolet" FontFamily="georgia" Grid.Column="0" Grid.Row="1" Name="adauga" Content="adauga" Click="adauga_Click"></Button>
+       
+            <Button VerticalAlignment="Top" Width="70" Height="25" Background="BlueViolet" FontFamily="georgia" Grid.Column="0" Grid.Row="1" Name="adauga" Content="adauga" Click="adauga_Click"></Button>
+            
+        
     </Grid>
 </Window>

@@ -47,6 +47,13 @@ namespace WorkoutAndTrackCalories
             new Aliment("carnat",1.7f,0,15,26,11,301),
         };
         public static float numar, cantitate, G = 0, Z = 0, P = 0, L = 0, ACG = 0, Q = 0, CAL = 0;
+
+        private void aliment_nou_Click(object sender, RoutedEventArgs e)
+        {
+            add_aliment_nou add_Aliment_Nou = new add_aliment_nou();
+            NavigationService.Navigate(add_Aliment_Nou);
+        }
+
         private void submit_Click(object sender, RoutedEventArgs e)
         {
             CaloriesOutput.Text +="*Total:\n"

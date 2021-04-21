@@ -1,0 +1,53 @@
+﻿<Window x:Class="WorkoutAndTrackCalories.exercices"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorkoutAndTrackCalories"
+        mc:Ignorable="d"
+        Title="exercices" Height="450" Width="300">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Dictionary1.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid Background="#CEFFF6" >
+        <ScrollViewer>
+            <StackPanel Orientation="Vertical">
+                <Button Style="{StaticResource RB}" Name="pushups" Click="pushups_Click">push ups</Button>
+                <Button Style="{StaticResource RB}" Name="archerpushups" Click="archerpushups_Click">archer push ups</Button>
+                <Button Style="{StaticResource RB}" Name="declinepushup" Click="declinepushup_Click">decline push ups</Button>
+                <Button Style="{StaticResource RB}" Name="weightedpushups" Click="weightedpushups_Click">weighted push ups</Button>
+                <Button Style="{StaticResource RB}" Name="widepushups" Click="widepushups_Click"> wide push ups</Button>
+                <Button Style="{StaticResource RB}" Name="clappingpushups" Click="clappingpushups_Click">clapping push ups</Button>
+                <Button Style="{StaticResource RB}" Name="diamondpushups" Click="diamondpushups_Click">diamond push ups</Button>
+                <Button Style="{StaticResource RB}" Name="tricepspushups" Click="tricepspushups_Click">triceps push ups</Button>
+                <Button Style="{StaticResource RB}" Name="skullcrushers" Click="skullcrushers_Click">skull crushers</Button>
+                <Button Style="{StaticResource RB}" Name="plank" Click="plank_Click">plank</Button>
+                <Button Style="{StaticResource RB}" Name="explosivepullups" Click="explosivepullups_Click">explosive pull ups</Button>
+                <Button Style="{StaticResource RB}" Name="archerpullups" Click="archerpullups_Click">archer pull ups</Button>
+                <Button Style="{StaticResource RB}" Name="tuckfrontleverraises" Click="tuckfrontleverraises_Click">tuck front lever raises</Button>
+                <Button Style="{StaticResource RB}" Name="widepullups" Click="widepullups_Click">wide pull ups</Button>
+                <Button Style="{StaticResource RB}" Name="pullups" Click="pullups_Click">pull ups</Button>
+                <Button Style="{StaticResource RB}" Name="hanginglegraises" Click="hanginglegraises_Click">hanging leg raises</Button>
+                <Button Style="{StaticResource RB}" Name="pistolsquats" Click="pistolsquats_Click">pistol squats</Button>
+                <Button Style="{StaticResource RB}" Name="bulgariansquats" Click="bulgariansquats_Click">bulgarian squats</Button>
+                <Button Style="{StaticResource RB}" Name="crunches" Click="crunches_Click">crunches</Button>
+                <Button Style="{StaticResource RB}" Name="jumpingsquats" Click="jumpingsquats_Click">jumping squats</Button>
+                <Button Style="{StaticResource RB}" Name="vups" Click="vups_Click">V-ups</Button>
+                <Button Style="{StaticResource RB}" Name="squats" Click="squats_Click">squats</Button>
+                <Button Style="{StaticResource RB}" Name="bicyclecrunches" Click="bicyclecrunches_Click">bicycle crunches</Button>
+                <Button Style="{StaticResource RB}" Name="highpullups" Click="highpullups_Click">high pull ups</Button>
+                <Button Style="{StaticResource RB}" Name="chinups" Click="chinups_Click">chin ups</Button>
+                <Button Style="{StaticResource RB}" Name="closepullups" Click="closepullups_Click">close pull ups</Button>
+                <Button Style="{StaticResource RB}" Name="calfraises" Click="calfraises_Click">calf raises</Button>
+                <Button Style="{StaticResource RB}" Name="lateralsquats" Click="lateralsquats_Click">lateral squats</Button>
+                <Button Style="{StaticResource RB}" Name="russiantwist" Click="russiantwist_Click">russian twist</Button>
+                <Button Style="{StaticResource RB}" Name="mountainclimber" Click="mountainclimber_Click">mountain climber</Button>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</Window>

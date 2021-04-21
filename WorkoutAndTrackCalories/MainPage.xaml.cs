@@ -46,5 +46,10 @@ namespace WorkoutAndTrackCalories
         {
             new BMI().ShowDialog();
         }
+
+        private void exercice_Click(object sender, RoutedEventArgs e)
+        {
+            new exercices().ShowDialog();
+        }
     }
 }

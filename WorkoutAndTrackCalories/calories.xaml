@@ -18,13 +18,21 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="30"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Column="0" FontFamily="cooper black" Foreground="Red" FontSize="18">introduceti alimentele si cantitatea</TextBlock>
+        <TextBlock Grid.Column="0" HorizontalAlignment="Center" FontFamily="cooper black" Foreground="Red" FontSize="18">introduceti alimentele si cantitatea</TextBlock>
         <Border Grid.Row="1" Grid.Column="0" CornerRadius="15" BorderThickness="5" BorderBrush="BlueViolet" Padding="12">
             <ScrollViewer>
             <TextBlock Name="CaloriesInput"  Background="Transparent"></TextBlock>
             </ScrollViewer>
         </Border>
-        <TextBlock Grid.Column="1" FontFamily="cooper black" Foreground="Red" FontSize="20" HorizontalAlignment="Center">total calorii</TextBlock>
+        <StackPanel Grid.Column="1" Orientation="Horizontal">
+            <StackPanel.Resources>
+                <Style TargetType="{x:Type TextBlock}">
+                    <Setter Property="Margin" Value="130,0,0,0"/>
+                </Style>
+            </StackPanel.Resources>
+        <TextBlock  FontFamily="cooper black" Foreground="Red" FontSize="20" HorizontalAlignment="Center" >total calorii</TextBlock>
+            <Button Margin="117,0,0,0" Foreground="Red" Name="aliment_nou" Click="aliment_nou_Click" Content="menu"/>
+        </StackPanel>
         <Border Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"  CornerRadius="15" BorderThickness="5" BorderBrush="BlueViolet" Padding="12">
             <ScrollViewer>
                 <TextBlock Name="CaloriesOutput"  ></TextBlock>
@@ -40,6 +48,7 @@
             
             <Button Grid.Column="0" Name="submit" Click="submit_Click" Content="terminati" Background="Transparent" FontSize="15" FontFamily="cooper black" Foreground="#0208FB"/>
             <Button Grid.Column="1" Name="add" Click="add_Click" Content="adauga aliment" Background="Transparent" FontSize="15" FontFamily="cooper black" Foreground="#0208FB"/>
+                
             </Grid>
         </Border>
         

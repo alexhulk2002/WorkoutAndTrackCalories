@@ -90,7 +90,7 @@ namespace WorkoutAndTrackCalories
             string result = "";
             int i_pushups = int.Parse(pushups.Text);
             result += i_pushups / 2 + " archer push ups\n";
-            result += i_pushups / 3 * 2 + " declie push ups\n";
+            result += i_pushups / 3 * 2 + " decline push ups\n";
             result += i_pushups / 3 * 2 + " weighted push ups\n";
             result += i_pushups / 2 + " push ups\n";
             result += i_pushups / 3 + " skull crushers\n";

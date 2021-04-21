@@ -17,6 +17,10 @@
             <RowDefinition Height="30"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+        <Button x:Name="exercice" Click="exercice_Click" Grid.Column="0" Grid.Row="0" Width="80" HorizontalAlignment="Left" Background="Gold" FontSize="18" FontFamily="times new roman">
+            exercices
+        </Button>
+
         <Border Grid.Row="0" Grid.ColumnSpan="2" BorderThickness="2" CornerRadius="10" Background="Transparent" Width="200" Height="30" VerticalAlignment="Top">
             <TextBlock HorizontalAlignment="Center" TextAlignment="Center" FontSize="22" Foreground="Red" FontFamily="Cooper Black" Margin="0,0,0,-2" Width="200">Hello</TextBlock>
         </Border>
