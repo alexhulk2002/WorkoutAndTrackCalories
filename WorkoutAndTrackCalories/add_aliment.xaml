@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorkoutAndTrackCalories"
         mc:Ignorable="d"
-        Title="add_aliment" Height="200" Width="400">
+        Title="add_aliment" Height="200" Width="400"
+        Loaded="Window_Loaded">
     <Window.Resources>
         <local:IndexConverter x:Key="IndexConverter"/>
     </Window.Resources>

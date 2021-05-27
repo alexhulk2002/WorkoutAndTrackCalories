@@ -23,6 +23,7 @@ namespace WorkoutAndTrackCalories
         {
             InitializeComponent();
             calories.Alimente=calories.Alimente.OrderBy(o => o.Name).ToList();
+            reading_writing.citire();
             AlimentsList.ItemsSource = calories.Alimente;
         }
 
@@ -53,6 +54,9 @@ namespace WorkoutAndTrackCalories
         }
         add_aliment_nou add_Aliment_Nou = new add_aliment_nou();
 
-       
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            AlimentsList.Items.Refresh();
+        }
     }
 }

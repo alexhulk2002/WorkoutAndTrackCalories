@@ -5,6 +5,7 @@
         <Setter Property="Foreground" Value="#0208FB"></Setter>
         <Setter Property="FontFamily" Value="cooper black"></Setter>
         <Setter Property="FontSize" Value="20"></Setter>
+        <Setter Property="Cursor" Value="Hand"/>
 
         <Setter Property="Template">
             <Setter.Value>

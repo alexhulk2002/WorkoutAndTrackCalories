@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static WorkoutAndTrackCalories.DatabaseTools;
 
 namespace WorkoutAndTrackCalories
 {
@@ -21,13 +22,15 @@ namespace WorkoutAndTrackCalories
     public partial class MainWindow : Window
     {
         Page1 page1 = new Page1();
+
         
        
         public MainWindow()
         {
             InitializeComponent();
-            PageViewer.Navigate(MainPage); 
-        }        
+            PageViewer.Navigate(MainPage);
+            OpenConnection();
+        }
 
         public static MainPage MainPage = new MainPage();
         public static calories CaloriesPage = new calories();

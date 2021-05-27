@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using static WorkoutAndTrackCalories.DatabaseTools;
 namespace WorkoutAndTrackCalories
 {
     /// <summary>
@@ -28,7 +28,17 @@ namespace WorkoutAndTrackCalories
 
         private void adauga_Click(object sender, RoutedEventArgs e)
         {
+            var name = nume_aliment.Text;
+            var Glucide = float.Parse(glucide.Text);
+            var Lipide = float.Parse(lipide.Text);
+            var Zaharuri = float.Parse(zaharuri.Text);
+            var Proteine = float.Parse(proteine.Text);
+            var Acg = float.Parse(acg.Text);
+            var Cal = float.Parse(cal.Text);
 
+            var aliment = new Aliment(name, Glucide, Zaharuri, Lipide, Proteine, Acg, Cal);
+            calories.Alimente.Add(aliment);
+            reading_writing.scrie();
         }
     }
 }

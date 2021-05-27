@@ -11,17 +11,18 @@
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Dictionary1.xaml"/>
             </ResourceDictionary.MergedDictionaries>
-            
+
         </ResourceDictionary>
     </Window.Resources>
     <Grid Background="#CEFFF6" >
         <ScrollViewer>
-            <StackPanel Orientation="Vertical">
+            <StackPanel Orientation="Vertical" Height="407" Width="303">
+
                 <Button Style="{StaticResource RB}" Name="pushups" Click="pushups_Click">push ups</Button>
                 <Button Style="{StaticResource RB}" Name="archerpushups" Click="archerpushups_Click">archer push ups</Button>
                 <Button Style="{StaticResource RB}" Name="declinepushup" Click="declinepushup_Click">decline push ups</Button>
                 <Button Style="{StaticResource RB}" Name="weightedpushups" Click="weightedpushups_Click">weighted push ups</Button>
-                <Button Style="{StaticResource RB}" Name="widepushups" Click="widepushups_Click"> wide push ups</Button>
+                <Button Style="{StaticResource RB}" Name="widepushups" Click="widepushups_Click">wide push ups</Button>
                 <Button Style="{StaticResource RB}" Name="clappingpushups" Click="clappingpushups_Click">clapping push ups</Button>
                 <Button Style="{StaticResource RB}" Name="diamondpushups" Click="diamondpushups_Click">diamond push ups</Button>
                 <Button Style="{StaticResource RB}" Name="tricepspushups" Click="tricepspushups_Click">triceps push ups</Button>
